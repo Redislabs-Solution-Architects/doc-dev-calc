@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Redis Doc Savings Calculator</title>
+    <script type="text/javascript" src="calc.js"></script>
+    <style>
+        label {
+            display: inline-block;
+            text-align: left;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Redis Document Dev Savings Calculator</h1>
+    <form>
+        <h3>Dev Costs</h3>
+        <label title="Fully-loaded, annual cost for a Developer" for="devCost">Developer Cost $</label>
+        <input class="input" id="devCost" type="number" value="100000" min="30000" max="300000"/>
+        <br>
+        <label title="Lines of code produced annually by a Developer" for="devLoc">LOC per Developer</label>
+        <input class="input" id="devLoc" type="number" value="10000" min="1000" max="100000" />
+        <br>
+        <label title="Maintenance cost as a percentage of implementation cost" for="maint">Maintenance %</label>
+        <input class="input" id="maint" type="number" value="50" min="1" max="100"/>
+        <hr>
+        <h2>Potential Savings with Redis JSON</h2>
+        <h3>Current Hash Set Usage</h3>
+        <label title="Number of nesting levels in use" for="nestingLevels">Nesting Levels</label>
+        <input class="input" id="nestingLevels" type="number" value="2" min="1" max ="10" />
+        <br>
+        <label title="Number of nested fields" for="nestingFields">Nested Fields</label>
+        <input class="input" id="nestingFields" type="number" value="20" min="1" max="200" />
+        <br>
+        <input id="jsonCalc" type="submit" value="Calculate" formaction="javascript:jsonCalc()"/>
+        <p id="jsonResults"></p>
+        <hr>
+        <h2>Potential Savings with RediSearch</h2>
+        <h3>Current Secondary Index Usage</h3>
+        <label title="Number of fields per record" for="searchFields">Fields</label>
+        <input class="input" id="searchFields" type="number" value="50" min="10" max="200"/>
+        <br>
+        <label title="Number of maintenance operations" for="maintOps">Maint Ops</label>
+        <input class="input" id="maintOps" type="number" value="10" min="1" max="1000"/>
+        <br>
+        <label title="Number of equality searches" for="equalityOps">Search - Equality Ops</label>
+        <input class="input" id="equalityOps" type="number" value="10" min="1" max="1000"/>
+        <br>
+        <label title="Number of range searches" for="rangeOps">Search - Range Ops</label>
+        <input class="input" id="rangeOps" type="number" value="10" min="1" max="1000"/>
+        <br>
+        <label title="Number of intersection searches" for="intersectionOps">Search - Intersection Ops</label>
+        <input class="input" id="intersectionOps" type="number" value="10" min="1" max="1000"/>
+        <br>
+        <label title="Number of union searches" for="unionOps">Search - Union Ops</label>
+        <input class="input" id="unionOps" type="number" value="10" min="1" max="1000"/>
+        <br>
+        <input id="searchCalc" type="submit" value="Calculate" formaction="javascript:searchCalc()"/>
+        <p id="searchResults"></p>
+    </form>
+</body>
+
+</html>
