@@ -3,6 +3,8 @@
 ## Summary
 This is a tool to show the software development costs that can be achieved using the Redis Stack features of Search and JSON instead of manual methods with
 hash and sorted sets.
+
+https://Redislabs-Solution-Architects.github.io/doc-dev-calc
 ___
 ## Features
 - Calculates development savings (time + money) Redis JSON vs Hash Sets and RediSearch vs Sorted Sets for secondary indices
@@ -316,4 +318,4 @@ await client.ft.search idx  '(@field1:abc) | (@field2:jkl)'
 - Search - Union.  Number of unique field union searches.
 
 ## Usage
-Open browser to index.html.
+Open browser to https://Redislabs-Solution-Architects.github.io/doc-dev-calc
