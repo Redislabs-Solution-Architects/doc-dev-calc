@@ -1,7 +1,7 @@
 # Redis Document (JSON/Search) Dev Savings Calculator
 
 ## Summary
-This is a tool to show the software development costs that can be achieved using the Redis Stack features of Search and JSON instead of manual methods with
+This is a tool to show the software development savings that can be achieved using the Redis Stack features of Search and JSON instead of manual methods with
 hash and sorted sets.
 
 https://Redislabs-Solution-Architects.github.io/doc-dev-calc
@@ -21,7 +21,7 @@ ___
 - Maintenance %.  Total software maintenance cost expressed as a percentage of the development cost.
 ___
 ### Redis JSON
-This block calculates the savings (time + money) that could be achieved by using Redis JSON instead Hash Sets.  While Hash Sets work great for simple data structures, nested data structures add significant complexity to the development process.
+This block calculates the savings (time + money) that could be achieved by using Redis JSON instead of Hash Sets.  While Hash Sets work great for simple data structures, nested data structures add significant complexity to the development process.
 #### Examples
 ##### Data
 ```json
@@ -125,7 +125,7 @@ return await client.json.get('outer1', '.inner1.inner<n-1>...inner<n>.field');
 ___
 ### RediSearch
 This block calculates the savings that can be achieved by using the inherent indexing functionality of RediSearch vs.
-constructing a secondary data structure via sorted sets for indices.  That method entails significant overhead in both of lines of code and control paths (cyclomatic complexity).  I use the product of SLOC and cyclomatic complexity to assign an overall value to costs associated with sorted set indices.
+constructing an index via sorted sets.  That method entails significant overhead in both of lines of code and control paths (cyclomatic complexity).  I use the product of SLOC and cyclomatic complexity to assign an overall value to costs associated with sorted set indices.
 #### Examples
 ##### Index Creation - Sorted Sets
 ```javascript
